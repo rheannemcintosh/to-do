@@ -23,7 +23,7 @@ class EpicController extends Controller
      */
     public function create()
     {
-        
+        return view('epic.create');
     }
 
     /**
