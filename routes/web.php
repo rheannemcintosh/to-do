@@ -29,6 +29,7 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/epic', [EpicController::class, 'create']);
+Route::get('/epic', [EpicController::class, 'create'])->name('epic');
+Route::post('/epic', [EpicController::class, 'store']);
 
 require __DIR__.'/auth.php';

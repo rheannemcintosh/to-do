@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Epic;
 
 class EpicController extends Controller
 {
@@ -34,7 +35,15 @@ class EpicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+        ]);
+
+        Epic::create([
+            'name' => $request->get('name'),
+        ]);
+
+        return redirect()->route('epic')->with('message', 'Epic Created');
     }
 
     /**
