@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EpicController;
+use App\Http\Controllers\TaskController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -30,6 +31,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/epic', [EpicController::class, 'create'])->name('epic');
+Route::get('/task', [TaskController::class, 'create'])->name('task');
 Route::post('/epic', [EpicController::class, 'store']);
 
 require __DIR__.'/auth.php';
