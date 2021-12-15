@@ -14,7 +14,9 @@ class EpicController extends Controller
      */
     public function index()
     {
-        //
+        $epics = Epic::all();
+
+        return view('epic.index', compact('epics'));
     }
 
     /**
