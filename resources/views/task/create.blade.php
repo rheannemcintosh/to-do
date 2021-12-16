@@ -46,9 +46,63 @@
             <form action="" method="POST">
                 {{ csrf_field() }}
                 <div class="mb-4">
-                    <label for="name" class="block text-lg">Name</label>
-                    <input type="text" name="name" class="form-control rounded-md shadow-md w-full" placeholder="Task Name">
+                    <label for="name" class="block text-lg">Task</label>
+                    <input type="text" name="task" class="form-control rounded-md shadow-md w-full" placeholder="Task">
                 </div>
+                <div class="mb-4">
+                    <label for="description" class="block text-lg">Description</label>
+                    <textarea name="description" class="form-control rounded-md shadow-md w-full" placeholder="Description"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="editing" class="block text-lg">Editing</label>
+                    <input type="checkbox" name="editing" class="form-control rounded-md shadow-md">
+                </div>
+                <div class="mb-4">
+                    <label for="epic" class="block text-lg">Epic</label>
+                    <input type="checkbox" name="epic" class="form-control rounded-md shadow-md">
+                </div>
+                <div class="mb-4">
+                    <label for="large-task" class="block text-lg">Large Task</label>
+                    <input type="checkbox" name="large-task" class="form-control rounded-md shadow-md">
+                </div>
+                <div class="mb-4">
+                    <label for="cancelled" class="block text-lg">Cancelled</label>
+                    <input type="checkbox" name="cancelled" class="form-control rounded-md shadow-md">
+                </div>
+                <div class="mb-4">
+                    <label for="large-task" class="block text-lg">Large Task</label>
+                    <input type="checkbox" name="large-task" class="form-control rounded-md shadow-md">
+                </div>
+                <div class="mb-4">
+                    <label for="priority" class="block text-lg">Priority</label>
+                    <input type="text" name="priority" class="form-control rounded-md shadow-md w-full" placeholder="Priority">
+                </div>
+                <div class="mb-4">
+                    <label for="category" class="block text-lg">Category</label>
+                    <input type="text" name="category" class="form-control rounded-md shadow-md w-full" placeholder="Category">
+                </div>
+                <div class="mb-4">
+                    <label for="sub-category" class="block text-lg">Sub Category</label>
+                    <input type="text" name="sub-category" class="form-control rounded-md shadow-md w-full" placeholder="Sub Category">
+                </div>
+                <div class="mb-4">
+                    <label for="sub-sub-category" class="block text-lg">Sub Sub Category</label>
+                    <input type="text" name="sub-sub-category" class="form-control rounded-md shadow-md w-full" placeholder="Sub Sub Category">
+                </div>
+                <div class="mb-4">
+                    <label for="due-date" class="block text-lg">Due Date</label>
+                    <input type="date" name="due-date" class="form-control rounded-md shadow-md w-full">
+                </div>
+                <div class="mb-4">
+                    <label for="started" class="block text-lg">Started</label>
+                    <input type="date" name="started" class="form-control rounded-md shadow-md w-full">
+                </div>
+                <div class="mb-4">
+                    <label for="completed" class="block text-lg">Completed</label>
+                    <input type="date" name="completed" class="form-control rounded-md shadow-md w-full">
+                </div>
+
+
                 <div>
                     <button class="bg-purple-500 text-white text-xl py-2 px-4 rounded">
                         Create a Task!
@@ -57,7 +111,7 @@
             </form>
 
         </div>
-
+        
         <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
             <div class="text-center text-sm text-gray-500 sm:text-left">
                 <div class="flex items-center">
