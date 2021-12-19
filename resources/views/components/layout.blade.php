@@ -16,7 +16,7 @@
                 <x-navigation />
 
                 <!-- Content Container -->
-                <div class="container w-full md:max-w-3xl mx-auto pt-20">
+                <div class="container mx-auto w-full pt-20">
                     {{ $slot }}
                 </div>
 
