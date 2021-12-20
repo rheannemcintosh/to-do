@@ -56,7 +56,7 @@ class EpicController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('components.error');
     }
 
     /**
@@ -67,7 +67,7 @@ class EpicController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('components.error');
     }
 
     /**
@@ -79,7 +79,7 @@ class EpicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return view('components.error');
     }
 
     /**
@@ -90,6 +90,6 @@ class EpicController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return view('components.error');
     }
 }
