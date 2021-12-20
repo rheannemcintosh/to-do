@@ -30,9 +30,14 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/epic/list', [EpicController::class, 'index']);
-Route::get('/epic', [EpicController::class, 'create'])->name('epic');
-Route::get('/task', [TaskController::class, 'create'])->name('task');
-Route::post('/epic', [EpicController::class, 'store']);
+//Route::get('/epic/list', [EpicController::class, 'index']);
+//Route::get('/epic', [EpicController::class, 'create'])->name('epic');
+//Route::get('/task', [TaskController::class, 'create'])->name('task');
+//Route::post('/epic', [EpicController::class, 'store']);
+
+Route::resources([
+    'epics' => EpicController::class,
+    'tasks' => TaskController::class,
+]);
 
 require __DIR__.'/auth.php';
