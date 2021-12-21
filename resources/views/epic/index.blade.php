@@ -1,6 +1,11 @@
 <x-layout>
     <div class="p-8">
         <h1 class="text-4xl mb-4">Epics</h1>
+        @if(Session::has('message'))
+            <div class="py-2 px-4 rounded-lg mb-2 text-white {{ Session::get('background')}} ">
+                {{ Session::get('message')}}
+            </div>
+        @endif
         <div class="grid grid-cols-10 bg-gray-400 p-2 text-center font-bold">
             <p>ID</p>
             <p class="col-span-2">Name</p>
@@ -18,7 +23,12 @@
                 <p class="p-1 text-sm">{{ $epic->created_at }}</p>
                 <p class="p-1 text-sm">Completed!</p>
                 <button class="h-8 px-4 m-2 mx-8 text-sm text-white bg-green-600 rounded-lg focus:shadow-outline hover:bg-green-800">Edit</button>
-                <button class="h-8 px-4 m-2 mx-8 text-sm text-white bg-red-600 rounded-lg focus:shadow-outline hover:bg-red-800">Delete</button>
+
+                <form method="post" action="{{ route('epics.destroy', $epic->id) }}">
+                    @csrf
+                    @method('DELETE')
+                    <button class="h-8 px-4 m-2 mx-8 text-sm text-white bg-red-600 rounded-lg focus:shadow-outline hover:bg-red-800">Delete</button>
+                </form>
             @endforeach
         </div>
 
