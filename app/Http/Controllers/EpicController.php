@@ -86,10 +86,18 @@ class EpicController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
     {
-        return view('components.error');
+        $epic = Epic::find($id);
+        $data = [
+            'background' => 'bg-red-500',
+            'message' => 'Epic ' . $id . ' Deleted!',
+        ];
+
+        $epic->delete();
+
+        return redirect()->route('epics.index')->with($data);
     }
 }
