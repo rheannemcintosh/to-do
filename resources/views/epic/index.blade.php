@@ -1,6 +1,11 @@
 <x-layout>
     <div class="p-8">
         <h1 class="text-4xl mb-4">Epics</h1>
+        @if(Session::has('message'))
+            <div class="py-2 px-4 rounded-lg mb-2 text-white {{ Session::get('background')}} ">
+                {{ Session::get('message')}}
+            </div>
+        @endif
         <div class="grid grid-cols-10 bg-gray-400 p-2 text-center font-bold">
             <p>ID</p>
             <p class="col-span-2">Name</p>
