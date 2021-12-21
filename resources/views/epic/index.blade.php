@@ -18,7 +18,12 @@
                 <p class="p-1 text-sm">{{ $epic->created_at }}</p>
                 <p class="p-1 text-sm">Completed!</p>
                 <button class="h-8 px-4 m-2 mx-8 text-sm text-white bg-green-600 rounded-lg focus:shadow-outline hover:bg-green-800">Edit</button>
-                <button class="h-8 px-4 m-2 mx-8 text-sm text-white bg-red-600 rounded-lg focus:shadow-outline hover:bg-red-800">Delete</button>
+
+                <form method="post" action="{{ route('epics.destroy', $epic->id) }}">
+                    @csrf
+                    @method('DELETE')
+                    <button class="h-8 px-4 m-2 mx-8 text-sm text-white bg-red-600 rounded-lg focus:shadow-outline hover:bg-red-800">Delete</button>
+                </form>
             @endforeach
         </div>
 
