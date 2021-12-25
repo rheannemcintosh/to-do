@@ -45,7 +45,7 @@ class EpicController extends Controller
             'name' => $request->get('name'),
         ]);
 
-        return redirect()->route('epic')->with('message', 'Epic Created');
+        return redirect()->route('epics.index')->with('message', 'Epic Created');
     }
 
     /**
