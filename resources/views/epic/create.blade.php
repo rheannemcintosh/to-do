@@ -43,7 +43,7 @@
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
         <h1 class="text-4xl mb-4">Create an EPIC</h1>
         <div>
-            <form action="" method="POST">
+            <form method="post" action="{{ route('epics.store') }}">
                 {{ csrf_field() }}
                 <div class="mb-4">
                     <label for="name" class="block text-lg">Name</label>
