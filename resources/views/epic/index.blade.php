@@ -19,11 +19,16 @@
             @foreach($epics as $epic)
                 <p class="p-1 font-bold">{{ $epic->id }}</p>
                 <p class="p-1 col-span-2">{{ $epic->name }}</p>
-                <p class="p-1 col-span-3 text-sm text-left">This is a test description and will be updated in due course.</p>
-                <p class="p-1 text-sm">{{ $epic->created_at }}</p>
-                <p class="p-1 text-sm">Completed!</p>
+                <p class="p-1 col-span-3 text-sm text-left">{{ $epic->description }}</p>
+                @if($epic->never_ending_flag)
+                    <div class="text-sm bg-gray-500 p-1 col-span-2">
+                        <p class="align-middle">Never Ending Task!</p>
+                    </div>
+                @else
+                    <p class="p-1 text-sm">{{ $epic->started_at }}</p>
+                    <p class="p-1 text-sm">@if(isset($epic->completed_at)) Completed! @else Ongoing! @endif</p>
+                @endif
                 <button class="h-8 px-4 m-2 mx-8 text-sm text-white bg-green-600 rounded-lg focus:shadow-outline hover:bg-green-800">Edit</button>
-
                 <form method="post" action="{{ route('epics.destroy', $epic->id) }}">
                     @csrf
                     @method('DELETE')
