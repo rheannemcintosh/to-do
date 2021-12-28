@@ -39,4 +39,19 @@ class Epic extends Model
             return $value;
         }
     }
+
+    /**
+     * Get the epic's started at value.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function getCompletedAtAttribute($value)
+    {
+        if ($value) {
+            return $value;
+        } else {
+            return 'Ongoing!';
+        }
+    }
 }
