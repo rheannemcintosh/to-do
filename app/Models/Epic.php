@@ -24,4 +24,34 @@ class Epic extends Model
     protected $fillable = [
         'name',
     ];
+
+    /**
+     * Get the epic's started at value.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function getStartedAtAttribute($value)
+    {
+        if ($value == '1970-01-01') {
+            return 'Started!';
+        } else {
+            return $value;
+        }
+    }
+
+    /**
+     * Get the epic's started at value.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function getCompletedAtAttribute($value)
+    {
+        if ($value) {
+            return $value;
+        } else {
+            return 'Ongoing!';
+        }
+    }
 }
