@@ -13,6 +13,12 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                tdTeal: {
+                    DEFAULT: '#1D5E5E',
+                }
+            }
+
         },
     },
 
