@@ -12,7 +12,19 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                poppins: ['Poppins', ...defaultTheme.fontFamily.sans],
+                abril: ['Abril Fatface', 'cursive'],
             },
+            fontSize: {
+                '10xl': '10rem',
+                '12xl': '14rem',
+            },
+            colors: {
+                tdTeal: {
+                    DEFAULT: '#1D5E5E',
+                }
+            }
+
         },
     },
 
