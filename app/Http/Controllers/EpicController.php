@@ -56,7 +56,9 @@ class EpicController extends Controller
      */
     public function show($id)
     {
-        return view('components.error');
+        $epic = Epic::find($id);
+
+        return view('epic.show', compact('epic'));
     }
 
     /**
