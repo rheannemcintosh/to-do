@@ -17,17 +17,17 @@ class CreateTasksTable extends Migration
             $table->id();
             $table->string('task');
             $table->text('description')->nullable();
-            $table->boolean('editing_flag')->default(true);
-            $table->boolean('epic_flag')->default(false);
-            $table->boolean('large_task_flag')->default(false);
-            $table->boolean('cancelled_flag')->default(false);
+            $table->foreignId('epic_id')->nullable()->constrained();
+            $table->boolean('complete')->default(false);
             $table->integer('priority')->nullable();
-            $table->string('category')->nullable();
-            $table->string('sub_category')->nullable();
-            $table->string('sub_sub_category')->nullable();
+            $table->foreignId('category_id')->nullable()->constrained();
+            $table->foreignId('sub_category_id')->nullable()->constrained('categories');
             $table->timestamp('due_date')->nullable();
-            $table->timestamp('started')->nullable();
-            $table->timestamp('completed') ->nullable();
+            $table->timestamp('started_at')->nullable();
+            $table->timestamp('completed_at') ->nullable();
+            $table->boolean('never_ending_flag')->default(false);
+            $table->boolean('cancelled_flag')->default(false);
+            $table->boolean('example')->default(false);
             $table->timestamps();
         });
     }
