@@ -23,8 +23,8 @@ class Task extends Model
      */
     protected $dates = [
         'due_date',
-        'started',
-        'completed',
+        'started_at',
+        'completed_at',
     ];
 
     /**
@@ -35,16 +35,16 @@ class Task extends Model
     protected $fillable = [
         'task',
         'description',
-        'editing_flag',
-        'epic_flag',
-        'large_task_flag',
-        'cancelled_flag',
+        'epic_id',
+        'complete',
         'priority',
-        'category',
-        'sub_category',
-        'sub_sub_category',
+        'category_id',
+        'sub_category_id',
         'due_date',
-        'started',
-        'completed',
+        'started_at',
+        'completed_at',
+        'never_ending_flag',
+        'cancelled_flag',
+        'example_flag',
     ];
 }
