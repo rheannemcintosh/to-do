@@ -23,6 +23,12 @@ class Epic extends Model
      */
     protected $fillable = [
         'name',
+        'description',
+        'complete',
+        'never_ending_flag',
+        'example',
+        'started_at',
+        'completed_at',
     ];
 
     /**
