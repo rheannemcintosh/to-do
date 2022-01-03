@@ -10,6 +10,11 @@
             <p class="font-poppins"><span class="font-extrabold">Never Ending Task:</span> @if($epic->never_ending_task) True @else False @endif</p>
             <div class="mt-6">
                 <h3 class="font-abril text-2xl">Related Tasks:</h3>
+                <ul>
+                @foreach ($epic->tasks as $task)
+                        <li class="font-poppins"><span class="font-extrabold">#{{ $task->id }}:</span> {{ $task->task }}</li>
+                @endforeach
+                </ul>
             </div>
         @endisset
     </div>
