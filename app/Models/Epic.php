@@ -60,4 +60,12 @@ class Epic extends Model
             return 'Ongoing!';
         }
     }
+
+    /**
+     * Get the details for each experience.
+     */
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);
+    }
 }
