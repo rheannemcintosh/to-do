@@ -23,8 +23,14 @@ module.exports = {
                 tdTeal: {
                     DEFAULT: '#1D5E5E',
                 }
-            }
-
+            },
+            gridTemplateColumns: {
+                // Simple 16 column grid
+                '13': 'repeat(16, minmax(0, 1fr))',
+                '14': 'repeat(16, minmax(0, 1fr))',
+                '15': 'repeat(16, minmax(0, 1fr))',
+                '16': 'repeat(16, minmax(0, 1fr))',
+            },
         },
     },
 
