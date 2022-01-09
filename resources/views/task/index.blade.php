@@ -34,9 +34,10 @@
                                 @if($task->never_ending_flag)
                                     <td colspan="3" class="py-3 px-6 text-center whitespace-nowrap">Never Ending Task</td>
                                 @else
-                                    <td class="py-3 px-6 text-left whitespace-nowrap">@isset($task->due_date){{ $task->due_date->format('Y') }}@endisset</td>
-                                    <td class="py-3 px-6 text-left whitespace-nowrap">@isset($task->started_at){{ $task->started_at->format('Y') }}@endisset</td>
-                                    <td class="py-3 px-6 text-left whitespace-nowrap">@isset($task->completed_at){{ $task->completed_at->format('Y') }}@endisset</td>
+                                    <td class="py-3 px-6 text-left whitespace-nowrap">@isset($task->due_date){{ $task->due_date->format('d M Y') }}@endisset</td>
+                                    <td class="py-3 px-6 text-left whitespace-nowrap">@isset($task->started_at){{ $task->started_at->format('d M Y') }}@endisset</td>
+                                    <td class="py-3 px-6 text-left whitespace-nowrap">@isset($task->completed_at){{ $task->completed_at->format('d M Y') }}@endisset</td>
+                                @endif
                                 @endif
                                 <td class="py-3 px-6 text-left whitespace-nowrap">Status</td>
                                 <td class="py-3 px-6 text-center">
