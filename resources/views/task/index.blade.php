@@ -9,7 +9,6 @@
                             <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
                                 <th class="py-3 px-4 text-center">ID</th>
                                 <th class="py-3 px-6 text-left">Name</th>
-                                <th class="py-3 px-6 text-left">Complete</th>
                                 <th class="py-3 px-6 text-left">Priority</th>
                                 <th class="py-3 px-6 text-left">Epic</th>
                                 <th class="py-3 px-6 text-left">Category</th>
@@ -26,7 +25,6 @@
                             <tr class="border-b border-gray-200 hover:bg-gray-100">
                                 <td class="py-3 px-4 text-center">{{ $task->id }}</td>
                                 <td class="py-3 px-6 text-left whitespace-nowrap">{{ $task->task }}</td>
-                                <td class="py-3 px-6 text-left whitespace-nowrap">{{ $task->complete }}</td>
                                 <td class="py-3 px-6 text-left whitespace-nowrap">{{ $task->priority }}</td>
                                 <td class="py-3 px-6 text-left whitespace-nowrap">{{ $task->epic_id }}</td>
                                 <td class="py-3 px-6 text-left whitespace-nowrap">{{ $task->category_id }}</td>
@@ -38,8 +36,19 @@
                                     <td class="py-3 px-6 text-left whitespace-nowrap">@isset($task->started_at){{ $task->started_at->format('d M Y') }}@endisset</td>
                                     <td class="py-3 px-6 text-left whitespace-nowrap">@isset($task->completed_at){{ $task->completed_at->format('d M Y') }}@endisset</td>
                                 @endif
+                                @if($task->complete)
+                                    <td class="py-3 px-6 text-center">
+                                        <span class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">Completed</span>
+                                    </td>
+                                @elseif($task->cancelled_flag)
+                                    <td class="py-3 px-6 text-center">
+                                        <span class="bg-red-200 text-red-600 py-1 px-3 rounded-full text-xs">Cancelled</span>
+                                    </td>
+                                @else
+                                    <td class="py-3 px-6 text-center">
+                                        <span class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">In Progress</span>
+                                    </td>
                                 @endif
-                                <td class="py-3 px-6 text-left whitespace-nowrap">Status</td>
                                 <td class="py-3 px-6 text-center">
                                     <div class="flex item-center justify-center">
                                         <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
