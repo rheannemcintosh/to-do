@@ -47,4 +47,20 @@ class Task extends Model
         'cancelled_flag',
         'example_flag',
     ];
+
+    /**
+     * Get the details for each experience.
+     */
+    public function category()
+    {
+        return $this->hasOne(Category::class, 'id', 'category_id');
+    }
+
+    /**
+     * Get the details for each experience.
+     */
+    public function subCategory()
+    {
+        return $this->hasOne(Category::class, 'id', 'sub_category_id');
+    }
 }
