@@ -24,7 +24,17 @@
                             <tr class="border-b border-gray-200 hover:bg-gray-100">
                                 <td class="py-3 px-4 text-center">{{ $task->id }}</td>
                                 <td class="py-3 px-6 text-left whitespace-nowrap">{{ $task->task }}</td>
-                                <td class="py-3 px-6 text-left whitespace-nowrap">{{ $task->priority }}</td>
+                                <td class="py-3 px-6 text-center">
+                                    @if ($task->priority == 1)
+                                        <span class="bg-red-200 text-red-600 py-1 px-3 rounded-full text-xs">{{ $task->priority }}</span>
+                                    @elseif ($task->priority == 2)
+                                        <span class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">{{ $task->priority }}</span>
+                                    @elseif ($task->priority == 3)
+                                        <span class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">{{ $task->priority }}</span>
+                                    @else
+                                        <span class="bg-gray-200 text-gray-600 py-1 px-3 rounded-full text-xs">0</span>
+                                    @endif
+                                </td>
                                 <td class="py-3 px-6 text-left whitespace-nowrap">{{ $task->epic_id }}</td>
                                 <td class="py-3 px-6 text-left text-xs whitespace-nowrap">{{ $task->category['name'] }}</td>
                                 <td class="py-3 px-6 text-left text-xs whitespace-nowrap">{{ $task->subCategory['name']}}</td>
