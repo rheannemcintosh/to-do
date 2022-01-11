@@ -41,28 +41,19 @@
                                 <td class="py-3 px-6 text-center text-xs whitespace-nowrap">
                                     @isset($task->due_date){{ $task->due_date->format('d M Y') }} @else - @endisset
                                 </td>
-                                @if($task->complete)
-                                    <td class="py-3 px-6 text-center">
+                                <td class="py-3 px-6 text-center">
+                                    @if($task->complete)
                                         <span class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">Completed</span>
-                                    </td>
-                                @elseif($task->cancelled_flag)
-                                    <td class="py-3 px-6 text-center">
+                                    @elseif($task->cancelled_flag)
                                         <span class="bg-red-200 text-red-600 py-1 px-3 rounded-full text-xs">Cancelled</span>
-                                    </td>
-                                @elseif($task->never_ending_flag)
-                                    <td class="py-3 px-6 text-center">
+                                    @elseif($task->never_ending_flag)
                                         <span class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">Never Ending</span>
-                                    </td>
-                                @elseif(!$task->started_at)
-                                    <td class="py-3 px-6 text-center">
+                                    @elseif(!$task->started_at)
                                         <span class="bg-gray-200 text-gray-600 py-1 px-3 rounded-full text-xs">Not Started</span>
-                                    </td>
-
-                                @else
-                                    <td class="py-3 px-6 text-center">
+                                    @else
                                         <span class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">In Progress</span>
-                                    </td>
-                                @endif
+                                    @endif
+                                </td>
                                 <td class="py-3 px-6 text-center text-xs whitespace-nowrap">
                                     @isset($task->started_at){{ $task->started_at->format('d M Y') }} @else - @endisset
                                 </td>
