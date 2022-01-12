@@ -35,7 +35,15 @@
                                         <span class="bg-gray-200 text-gray-600 py-1 px-3 rounded-full text-xs">0</span>
                                     @endif
                                 </td>
-                                <td class="py-3 px-6 text-left whitespace-nowrap">{{ $task->epic_id }}</td>
+                                <td class="py-3 px-6 text-center whitespace-nowrap">
+                                    @isset ($task->epic)
+                                        <a href="{{ url('/epics/1') }}">
+                                            <span class="bg-pink-100 hover:bg-pink-200 text-pink-600 py-1 px-3 rounded-full text-xs">{{ $task->epic['name'] }}</span>
+                                        </a>
+                                    @else
+                                        -
+                                    @endisset
+                                </td>
                                 <td class="py-3 px-6 text-left text-xs whitespace-nowrap">{{ $task->category['name'] }}</td>
                                 <td class="py-3 px-6 text-left text-xs whitespace-nowrap">{{ $task->subCategory['name']}}</td>
                                 <td class="py-3 px-6 text-center text-xs whitespace-nowrap">
