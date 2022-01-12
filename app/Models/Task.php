@@ -63,4 +63,8 @@ class Task extends Model
     {
         return $this->hasOne(Category::class, 'id', 'sub_category_id');
     }
+
+    public function epic(){
+        return $this->belongsTo(Epic::class);
+    }
 }
