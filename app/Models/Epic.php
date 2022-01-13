@@ -32,19 +32,28 @@ class Epic extends Model
     ];
 
     /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = [
+        'started_at',
+    ];
+
+    /**
      * Get the epic's started at value.
      *
      * @param  string  $value
      * @return string
      */
-    public function getStartedAtAttribute($value)
-    {
-        if ($value == '1970-01-01') {
-            return 'Started!';
-        } else {
-            return $value;
-        }
-    }
+//    public function getStartedAtAttribute($value)
+//    {
+//        if ($value == '1970-01-01') {
+//            return 'Started!';
+//        } else {
+//            return $value;
+//        }
+//    }
 
     /**
      * Get the epic's started at value.
