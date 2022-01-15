@@ -10412,6 +10412,22 @@ select{
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
+.grid-cols-13{
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+}
+
+.grid-cols-14{
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+}
+
+.grid-cols-15{
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+}
+
+.grid-cols-16{
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+}
+
 .grid-cols-none{
   grid-template-columns: none;
 }
@@ -22721,6 +22737,10 @@ select{
   line-height: 1;
 }
 
+.text-2xs{
+  font-size: 0.6rem;
+}
+
 .text-10xl{
   font-size: 10rem;
 }
@@ -32330,6 +32350,26 @@ select{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  text-align: center;
+  padding: 2px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 @media (min-width: 640px){
   .sm\:container{
     width: 100%;
@@ -41902,6 +41942,22 @@ select{
 
   .sm\:grid-cols-12{
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-13{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-14{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-15{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-16{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
   }
 
   .sm\:grid-cols-none{
@@ -54211,6 +54267,10 @@ select{
   .sm\:text-9xl{
     font-size: 8rem;
     line-height: 1;
+  }
+
+  .sm\:text-2xs{
+    font-size: 0.6rem;
   }
 
   .sm\:text-10xl{
@@ -73384,6 +73444,22 @@ select{
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-13{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-14{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-15{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-16{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
   .md\:grid-cols-none{
     grid-template-columns: none;
   }
@@ -85691,6 +85767,10 @@ select{
   .md\:text-9xl{
     font-size: 8rem;
     line-height: 1;
+  }
+
+  .md\:text-2xs{
+    font-size: 0.6rem;
   }
 
   .md\:text-10xl{
@@ -104864,6 +104944,22 @@ select{
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
+  .lg\:grid-cols-13{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-14{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-15{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-16{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
   .lg\:grid-cols-none{
     grid-template-columns: none;
   }
@@ -117171,6 +117267,10 @@ select{
   .lg\:text-9xl{
     font-size: 8rem;
     line-height: 1;
+  }
+
+  .lg\:text-2xs{
+    font-size: 0.6rem;
   }
 
   .lg\:text-10xl{
@@ -136344,6 +136444,22 @@ select{
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
+  .xl\:grid-cols-13{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
+  .xl\:grid-cols-14{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
+  .xl\:grid-cols-15{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
+  .xl\:grid-cols-16{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
   .xl\:grid-cols-none{
     grid-template-columns: none;
   }
@@ -148651,6 +148767,10 @@ select{
   .xl\:text-9xl{
     font-size: 8rem;
     line-height: 1;
+  }
+
+  .xl\:text-2xs{
+    font-size: 0.6rem;
   }
 
   .xl\:text-10xl{
@@ -167824,6 +167944,22 @@ select{
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
+  .\32xl\:grid-cols-13{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
+  .\32xl\:grid-cols-14{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
+  .\32xl\:grid-cols-15{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
+  .\32xl\:grid-cols-16{
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+
   .\32xl\:grid-cols-none{
     grid-template-columns: none;
   }
@@ -180133,6 +180269,10 @@ select{
     line-height: 1;
   }
 
+  .\32xl\:text-2xs{
+    font-size: 0.6rem;
+  }
+
   .\32xl\:text-10xl{
     font-size: 10rem;
   }
@@ -189729,4 +189869,5 @@ select{
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+
 

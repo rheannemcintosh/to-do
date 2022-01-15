@@ -16,6 +16,7 @@ module.exports = {
                 abril: ['Abril Fatface', 'cursive'],
             },
             fontSize: {
+                '2xs': '0.6rem',
                 '10xl': '10rem',
                 '12xl': '14rem',
             },

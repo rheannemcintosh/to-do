@@ -38,6 +38,7 @@ class Epic extends Model
      */
     protected $dates = [
         'started_at',
+        'completed_at'
     ];
 
     /**
@@ -61,14 +62,14 @@ class Epic extends Model
      * @param  string  $value
      * @return string
      */
-    public function getCompletedAtAttribute($value)
-    {
-        if ($value) {
-            return $value;
-        } else {
-            return 'Ongoing!';
-        }
-    }
+//    public function getCompletedAtAttribute($value)
+//    {
+//        if ($value) {
+//            return $value;
+//        } else {
+//            return 'Ongoing!';
+//        }
+//    }
 
     /**
      * Get the details for each experience.
