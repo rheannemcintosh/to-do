@@ -51,7 +51,10 @@
                                 </td>
                                 <td class="py-3 px-6 text-center">
                                     @if($task->complete)
-                                        <span class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">Completed</span>
+                                        <div class="tooltip">
+                                            <span class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">Completed</span>
+                                            <span class="tooltiptext w-full text-2xs bg-white text-gray-600 border border-gray-600">{{ $task->completed_at->format('d M Y') }}</span>
+                                        </div>
                                     @elseif($task->cancelled_flag)
                                         <span class="bg-red-200 text-red-600 py-1 px-3 rounded-full text-xs">Cancelled</span>
                                     @elseif($task->never_ending_flag)

@@ -1,4 +1,6 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import 'tooltip.css';
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@200&display=swap');
+
