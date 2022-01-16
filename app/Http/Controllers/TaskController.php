@@ -82,6 +82,14 @@ class TaskController extends Controller
      */
     public function destroy($id)
     {
-        return view('components.error');
+        $task = Task::find($id);
+        $data = [
+            'background' => 'bg-red-500',
+            'message' => 'Task ' . $id . ' Deleted!',
+        ];
+
+        $task->delete();
+
+        return redirect()->route('tasks.index')->with($data);
     }
 }
