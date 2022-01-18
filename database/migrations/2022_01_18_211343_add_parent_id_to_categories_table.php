@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCategoryTypesTable extends Migration
+class AddParentIdToCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateCategoryTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('category_types', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->timestamps();
+        Schema::table('categories', function (Blueprint $table) {
+            $table->integer('parent_id')->nullable()->after('name');
         });
     }
 
@@ -27,6 +25,8 @@ class CreateCategoryTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('category_types');
+        Schema::table('categories', function (Blueprint $table) {
+            $table->dropColumn('parent_id');
+        });
     }
 }
