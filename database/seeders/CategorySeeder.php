@@ -25,7 +25,7 @@ class CategorySeeder extends Seeder
         Category::create([
             'id' => 2,
             'name' => 'CodeCademy',
-            'parent_id' => null,
+            'parent_id' => 1,
         ]);
 
         Category::create([

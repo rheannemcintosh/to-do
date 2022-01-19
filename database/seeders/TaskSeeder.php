@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Epic;
+use App\Models\Task;
 use Illuminate\Database\Seeder;
 
-class EpicSeeder extends Seeder
+class TaskSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,14 +14,17 @@ class EpicSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('epics')->delete();
+        \DB::table('tasks')->delete();
 
-        Epic::create([
+        Task::create([
             'id' => 1,
-            'name' => 'Example Name',
+            'task' => 'Example Task',
             'description' => 'Example Description',
+            'epic_id' => 1,
             'complete' => false,
-            'example' => true,
+            'priority' => 1,
+            'category_id' => 1,
+            'sub_category_id' => 2,
         ]);
     }
 }
