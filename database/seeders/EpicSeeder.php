@@ -17,27 +17,11 @@ class EpicSeeder extends Seeder
         \DB::table('epics')->delete();
 
         Epic::create([
-            'name' => 'Bullet Journal 2022'
-        ]);
-
-        Epic::create([
-            'name' => 'Just Journal'
-        ]);
-
-        Epic::create([
-            'name' => 'Rheanne McIntosh Portfolio'
-        ]);
-
-        Epic::create([
-            'name' => 'Weekly Tasks'
-        ]);
-
-        Epic::create([
-            'name' => 'To Do Application'
-        ]);
-
-        Epic::create([
-            'name' => 'Bath University'
+            'id' => 1,
+            'name' => 'Example Name',
+            'description' => 'Example Description',
+            'complete' => false,
+            'example' => true,
         ]);
     }
 }
