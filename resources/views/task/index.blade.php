@@ -42,7 +42,7 @@
                                 </td>
                                 <td class="py-3 px-6 text-center whitespace-nowrap">
                                     @isset ($task->epic)
-                                        <a href="{{ url('/epics/1') }}">
+                                        <a href="{{ url('/epics/' . $task->epic['id']) }}">
                                             <span class="bg-pink-100 hover:bg-pink-200 text-pink-600 py-1 px-3 rounded-full text-xs">{{ $task->epic['name'] }}</span>
                                         </a>
                                     @else
