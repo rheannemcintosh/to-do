@@ -55,7 +55,7 @@
                                     @isset($task->due_date){{ $task->due_date->format('d M Y') }} @else - @endisset
                                 </td>
                                 <td class="py-3 px-6 text-center">
-                                    @if($task->complete)
+                                    @if($task->complete && isset($task->completed_at))
                                         <div class="tooltip">
                                             <span class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">Completed</span>
                                             <span class="tooltiptext w-full text-2xs bg-white text-gray-600 border border-gray-600">{{ $task->completed_at->format('d M Y') }}</span>
