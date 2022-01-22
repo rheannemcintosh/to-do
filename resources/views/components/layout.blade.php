@@ -5,18 +5,19 @@
     <x-head />
 
     <!-- Body -->
-    <body>
-    
+    <body class="">
+
 
         <!-- Page Content -->
-        <div class="bg-gray-100 page-wrap min-h-screen pb-10">
-            <main>
+        <div class="min-h-screen bg-gray-100 page-wrap pb-10">
+
+            <main class="">
 
                 <!-- Navigation -->
                 <x-navigation />
 
                 <!-- Content Container -->
-                <div class="container mx-auto w-full pt-20">
+                <div class="container mx-auto w-full pt-28">
                     {{ $slot }}
                 </div>
 
