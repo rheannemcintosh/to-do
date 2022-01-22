@@ -23,6 +23,7 @@ module.exports = {
             colors: {
                 tdTeal: {
                     DEFAULT: '#1D5E5E',
+                    dark: '#124040',
                 }
             },
             gridTemplateColumns: {
