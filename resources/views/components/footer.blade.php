@@ -1,4 +1,4 @@
-<footer class="bg-purple-900 text-white p-16">
+<footer class="bottom-0 bg-tdTeal text-white p-16">
 
     <!-- Icon List -->
     <div class="pb-4 text-center">
