@@ -6,7 +6,7 @@
         </div>
     @endif
     <div class="overflow-x-auto">
-        <div class="min-w-screen min-h-screen bg-gray-100 flex justify-center bg-gray-100 font-sans overflow-hidden">
+        <div class="min-w-screen bg-gray-100 flex justify-center bg-gray-100 font-sans overflow-hidden">
             <div class="w-full">
                 <div class="bg-white shadow-md rounded my-6">
                     <table class="font-poppins min-w-max w-full table-auto text-sm">
