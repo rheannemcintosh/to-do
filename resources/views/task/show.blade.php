@@ -25,13 +25,19 @@
             -
         @endisset
     </div>
-    <p>Priority: {{ $task->priority }}</p>
-    <p>Category: {{ $task->category['name'] }}</p>
-    <p>Sub Category: {{ $task->subCategory['name']}}</p>
+    @if ($task->priority == 1)
+        <span class="bg-red-200 text-red-600 py-1 px-3 rounded-full text-xs">{{ $task->priority }}</span>
+    @elseif ($task->priority == 2)
+        <span class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">{{ $task->priority }}</span>
+    @elseif ($task->priority == 3)
+        <span class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">{{ $task->priority }}</span>
+    @else
+        <span class="bg-gray-200 text-gray-600 py-1 px-3 rounded-full text-xs">0</span>
+    @endif
+    <p>Category: {{ $task->category['name'] }} -> {{ $task->subCategory['name']}}</p>
     <p>Due Date: {{ $task->priority }}</p>
     <p>Started At: {{ $task->priority }}</p>
     <p>Completed At: {{ $task->priority }}</p>
     <p>Never Ending Flag: {{ $task->never_ending_flag }}</p>
-    <p>Cancelled Flag: {{ $task->cancelled_flag }}</p>
     <p>Example: {{ $task->example }}</p>
 </x-layout>
