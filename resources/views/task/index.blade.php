@@ -65,7 +65,7 @@
                                 @elseif(!$task->started_at)
                                     <span class="bg-gray-200 text-gray-600 py-1 px-3 rounded-full text-xs">Not Started</span>
                                 @else
-                                    <span class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">In Progress</span>
+                                    <span class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">In Progress</span>
                                 @endif
                             </td>
                             <td class="py-3 px-6 text-left text-xs whitespace-nowrap">
