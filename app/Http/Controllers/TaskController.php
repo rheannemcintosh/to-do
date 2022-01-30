@@ -48,7 +48,9 @@ class TaskController extends Controller
      */
     public function show($id)
     {
-        return view('components.error');
+        $task = Task::find($id);
+
+        return view('task.show', compact('task'));
     }
 
     /**
