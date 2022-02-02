@@ -3,7 +3,7 @@
     @if ($task->priority == 1)
         <span class="bg-red-200 text-red-600 py-1 px-3 rounded-full text-sm">{{ $task->priority }}</span>
     @elseif ($task->priority == 2)
-        <span class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-sm">{{ $task->priority }}</span>
+        <span class="bg-orange-200 text-orange-600 py-1 px-3 rounded-full text-sm">{{ $task->priority }}</span>
     @elseif ($task->priority == 3)
         <span class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-sm">{{ $task->priority }}</span>
     @else
@@ -19,7 +19,7 @@
     @elseif (!$task->started_at)
         <span class="bg-gray-200 text-gray-600 py-1 px-3 rounded-full text-sm">Not Started</span>
     @else
-        <span class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">In Progress</span>
+        <span class="bg-orange-200 text-orange-600 py-1 px-3 rounded-full text-xs">In Progress</span>
     @endif
     <div class="mb-6">
         <p class="mt-6 font-poppins font-black">{{ $task->task }}</p>

@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 module.exports = {
     purge: [
@@ -21,6 +22,10 @@ module.exports = {
                 '12xl': '14rem',
             },
             colors: {
+                orange:colors.orange,
+                fuchsia:colors.fuchsia,
+                teal:colors.teal,
+                lime:colors.lime,
                 tdTeal: {
                     DEFAULT: '#1D5E5E',
                     dark: '#124040',
