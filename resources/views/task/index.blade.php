@@ -63,11 +63,11 @@
                                 @elseif($task->cancelled_flag)
                                     <span class="bg-red-200 text-red-600 py-1 px-3 rounded-full text-xs">Cancelled</span>
                                 @elseif($task->never_ending_flag)
-                                    <span class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">Never Ending</span>
+                                    <span class="bg-orange-100 text-orange-600 py-1 px-3 rounded-full text-xs">Never Ending</span>
                                 @elseif(!$task->started_at)
                                     <span class="bg-gray-200 text-gray-600 py-1 px-3 rounded-full text-xs">Not Started</span>
                                 @else
-                                    <span class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">In Progress</span>
+                                    <span class="bg-orange-200 text-orange-600 py-1 px-3 rounded-full text-xs">In Progress</span>
                                 @endif
                             </td>
                             <td class="py-3 px-6 text-left text-xs whitespace-nowrap">
@@ -93,7 +93,7 @@
                                 @if ($task->priority == 1)
                                     <span class="bg-red-200 text-red-600 py-1 px-3 rounded-full text-xs">{{ $task->priority }}</span>
                                 @elseif ($task->priority == 2)
-                                    <span class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">{{ $task->priority }}</span>
+                                    <span class="bg-orange-200 text-orange-600 py-1 px-3 rounded-full text-xs">{{ $task->priority }}</span>
                                 @elseif ($task->priority == 3)
                                     <span class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">{{ $task->priority }}</span>
                                 @else

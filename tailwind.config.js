@@ -22,6 +22,7 @@ module.exports = {
                 '12xl': '14rem',
             },
             colors: {
+                orange:colors.orange,
                 fuchsia:colors.fuchsia,
                 teal:colors.teal,
                 lime:colors.lime,
