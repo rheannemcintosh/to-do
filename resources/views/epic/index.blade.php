@@ -32,12 +32,10 @@
                                             <span class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">Completed</span>
                                             <span class="tooltiptext w-full text-2xs bg-white text-gray-600 border border-gray-600">{{ $epic->completed_at->format('d M Y') }}</span>
                                         </div>
-                                    @elseif($epic->never_ending_flag)
-                                        <span class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">Never Ending</span>
                                     @elseif(!$epic->started_at)
                                         <span class="bg-gray-200 text-gray-600 py-1 px-3 rounded-full text-xs">Not Started</span>
                                     @else
-                                        <span class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">In Progress</span>
+                                        <span class="bg-orange-200 text-orange-600 py-1 px-3 rounded-full text-xs">In Progress</span>
                                     @endif
                                 </td>
                                 <td class="py-3 px-6 text-center text-xs whitespace-nowrap">
