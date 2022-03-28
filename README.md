@@ -2,9 +2,11 @@
 
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-<!-- ## Project Overview -->
+## Project Overview
+The To Do Application allows a user to manage their perosnal to do list, with the use of epics, tasks, sub-tasks and habits!
 
-<!-- ### Inspiration -->
+### Inspiration
+I've also been a list maker since I was young, and I have never found an application that does everything I want it to do. Therefore I decided to make my own!
 
 <!-- ### Customising the Application -->
 
@@ -21,7 +23,10 @@
 - [ ] Archive Repository
 
 ## Future Ideas
-<!-- - :bulb: Launch website -->
+- :bulb: Add User Capabilities
+- :bulb: Update Epics
+- :bulb: Update Tasks
+- :bulb: Launch website
 
 ## Notes
 - **Language:** PHP
