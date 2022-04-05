@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             EpicSeeder::class,
             TaskSeeder::class,
+            ShortcodeSeeder::class,
         ]);
     }
 }
