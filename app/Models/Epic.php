@@ -77,4 +77,12 @@ class Epic extends Model
     {
         return $this->hasMany(Task::class);
     }
+
+
+    /**
+     * Get the details for each experience.
+     */
+    public function shortcode(){
+        return $this->belongsTo(Shortcode::class);
+    }
 }
