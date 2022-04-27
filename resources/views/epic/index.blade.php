@@ -13,6 +13,7 @@
                         <thead>
                         <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
                             <th class="py-3 px-4 text-center">ID</th>
+                            <th class="py-3 px-4 text-center">Shortcode</th>
                             <th class="py-3 px-6 text-left">Name</th>
                             <th class="py-3 px-6 text-center">Description</th>
                             <th class="py-3 px-6 text-center">Status</th>
@@ -24,6 +25,7 @@
                         @foreach($epics as $epic)
                             <tr class="border-b border-gray-200 hover:bg-gray-100">
                                 <td class="py-3 px-4 text-center">{{ $epic->id }}</td>
+                                <td class="py-3 px-4 text-center">@isset($epic->shortcode['shortcode']){{$epic->shortcode['shortcode']}}@else - @endisset</td>
                                 <td class="py-3 px-6 text-left whitespace-nowrap">{{ $epic->short_name }}</td>
                                 <td class="py-3 px-6 text-left whitespace-nowrap">{{ $epic->long_name}}</td>
                                 <td class="py-3 px-6 text-center">
